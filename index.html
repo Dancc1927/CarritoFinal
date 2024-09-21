@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Tienda carro compras</h1>
+        <div class="filters">
+            <label for="price-sort">Ordenar por precio:</label>
+            <select id="price-sort" onchange="handlePriceSort(this.value)">
+                <option value="">Seleccionar</option>
+                <option value="asc">Ascendente</option>
+                <option value="desc">Descendente</option>
+            </select>
+
+            <label for="filter_category">Filtrar por categoria:</label>
+            <select id="filter_category" onchange="handleCategoryFilter(this.value)">
+                <option value="">all/option>
+            </select>
+        </div>
+    </header>
+
+    <main>
+        <section id="list_product" class="list_product">
+        </section>
+
+        <aside class="cart-section">
+            <h2> ðŸ›’Carrito de compras</h2>
+            <div id="cart" class="cart">
+            </div>
+            <div id="cart-all" class="cart-all">
+                Total: $0.00
+            </div>
+        </aside>
+    </main>
+
+    <footer>
+        <p>&copy; daniela casas</p>
+    </footer>
+
+    <script src="scripts/app.js"></script>
+</body>
+</html>
+
+
